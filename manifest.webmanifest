@@ -1,0 +1,9 @@
+{
+  "name": "Criação de Sites Modernos — Formação Web",
+  "short_name": "Formação Web",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0b1020",
+  "description": "Formação em HTML, CSS e JavaScript com laboratório, tutor e progresso."
+}

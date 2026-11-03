@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Ambiente de aprendizagem de HTML, CSS e JavaScript: aulas, laboratório, biblioteca, tutor e avaliação.">
+  <title>Criação de Sites Modernos | Formação Web</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">FW</div>
+        <div><strong>FORMAÇÃO WEB</strong><small>Aprender · construir · publicar</small></div>
+      </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Visão geral</button>
+        <button class="nav-item" data-view="course"><span>▤</span> Trilha de aulas</button>
+        <button class="nav-item" data-view="lab"><span>⌘</span> Laboratório de código</button>
+        <button class="nav-item" data-view="library"><span>▧</span> Biblioteca ilustrada</button>
+        <button class="nav-item" data-view="tutor"><span>✳</span> Tutor inteligente</button>
+        <button class="nav-item" data-view="assessment"><span>✓</span> Avaliações</button>
+        <button class="nav-item" data-view="project"><span>◇</span> Projeto final</button>
+        <button class="nav-item" data-view="certificate"><span>▱</span> Certificação</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="progress-mini"><div class="row-between"><span>Seu progresso</span><strong id="sideProgress">0%</strong></div><div class="progress-track"><span id="sideProgressBar"></span></div></div>
+        <button class="nav-item" id="themeToggle"><span>◐</span> Alternar tema</button>
+        <button class="nav-item" id="exportData"><span>⇩</span> Exportar progresso</button>
+        <label class="nav-item import-label"><span>⇧</span> Importar progresso<input type="file" id="importData" accept="application/json"></label>
+      </div>
+    </aside>
+
+    <main id="main" class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Abrir menu">☰</button>
+        <div><span class="eyebrow">AMBIENTE DE APRENDIZAGEM</span><h1 id="pageTitle">Visão geral</h1></div>
+        <div class="top-actions"><span class="status-pill" id="connectionStatus"><i></i> Modo local</span><span class="avatar" aria-label="Perfil de estudante">E</span></div>
+      </header>
+
+      <section class="view active" id="view-home">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow light">FORMAÇÃO PRÁTICA EM DESENVOLVIMENTO WEB</span>
+            <h2>Criação de<br><em>Sites Modernos</em></h2>
+            <p>HTML, CSS e JavaScript — do zero à publicação.</p>
+            <div class="hero-actions"><button class="btn btn-primary" data-go="course">Continuar aprendendo <span>→</span></button><button class="btn btn-ghost" data-go="lab">Abrir laboratório</button></div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orb orb-a"></div><div class="orb orb-b"></div>
+            <div class="code-window"><div class="window-dots"><b></b><b></b><b></b><span>index.html</span></div><div class="code-lines"><i>&lt;main&gt;</i><i class="indent">&lt;h1&gt;Olá, mundo!&lt;/h1&gt;</i><i class="indent">&lt;p&gt;Meu primeiro site&lt;/p&gt;</i><i>&lt;/main&gt;</i><i class="code-blue">/* criando possibilidades */</i></div></div>
+            <div class="floating-tag tag-html">HTML</div><div class="floating-tag tag-css">CSS</div><div class="floating-tag tag-js">JS</div>
+          </div>
+        </div>
+
+        <section class="panel account-panel" aria-labelledby="accountTitle">
+          <div class="account-copy"><span class="eyebrow">CONTA E SINCRONIZAÇÃO</span><h3 id="accountTitle">Acompanhe sua formação em diferentes dispositivos</h3><p id="accountStatus" aria-live="polite">Modo local ativo. Configure o Supabase para habilitar contas e sincronização.</p></div>
+          <form id="authForm" class="auth-form"><label for="authEmail">E-mail</label><input id="authEmail" type="email" autocomplete="email" required placeholder="seu@email.com"><label for="authPassword">Senha</label><input id="authPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="Mínimo de 8 caracteres"><div class="auth-actions"><button class="btn btn-primary" type="submit" id="signInBtn">Entrar</button><button class="btn btn-secondary" type="button" id="signUpBtn">Criar conta</button><button class="btn btn-secondary" type="button" id="signOutBtn" hidden>Sair</button></div><button class="text-button" type="button" id="syncBtn">Sincronizar meu progresso</button></form>
+        </section>
+
+        <section class="panel account-panel" aria-labelledby="accountTitle">
+          <div class="account-copy"><span class="eyebrow">CONTA E SINCRONIZAÇÃO</span><h3 id="accountTitle">Acompanhe sua formação em diferentes dispositivos</h3><p id="accountStatus" aria-live="polite">Modo local ativo. Configure o Supabase para habilitar contas e sincronização.</p></div>
+          <form id="authForm" class="auth-form"><label for="authEmail">E-mail</label><input id="authEmail" type="email" autocomplete="email" required placeholder="seu@email.com"><label for="authPassword">Senha</label><input id="authPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="Mínimo de 8 caracteres"><div class="auth-actions"><button class="btn btn-primary" type="submit" id="signInBtn">Entrar</button><button class="btn btn-secondary" type="button" id="signUpBtn">Criar conta</button><button class="btn btn-secondary" type="button" id="signOutBtn" hidden>Sair</button></div><button class="text-button" type="button" id="syncBtn">Sincronizar meu progresso</button></form>
+        </section>
+
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon">▤</span><div><strong>12</strong><small>Aulas estruturadas</small></div></article>
+          <article class="stat-card"><span class="stat-icon">⌘</span><div><strong>01</strong><small>Laboratório integrado</small></div></article>
+          <article class="stat-card"><span class="stat-icon">▧</span><div><strong>06</strong><small>Referências essenciais</small></div></article>
+          <article class="stat-card"><span class="stat-icon">✓</span><div><strong id="completedStat">0</strong><small>Aulas concluídas</small></div></article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel">
+            <div class="section-heading"><div><span class="eyebrow">SUA JORNADA</span><h3>Trilha de aprendizagem</h3></div><button class="text-button" data-go="course">Ver todas →</button></div>
+            <div id="homeModules" class="module-list"></div>
+          </section>
+          <section class="panel next-panel">
+            <span class="eyebrow">PRÓXIMO PASSO</span><h3 id="nextLessonTitle">Comece pela primeira aula</h3><p id="nextLessonDesc">Conheça como a web funciona e prepare seu primeiro projeto.</p><button class="btn btn-primary full" id="nextLessonBtn">Abrir aula →</button>
+            <div class="tip-box"><strong>💡 Dica de aprendizagem</strong><p>Experimente, observe o resultado, altere o código e explique com suas palavras o que mudou.</p></div>
+          </section>
+        </div>
+        <p class="disclaimer">Este ambiente é uma versão inicial local. Progresso e preferências ficam neste navegador até exportação ou integração com uma conta.</p>
+      </section>
+
+      <section class="view" id="view-course">
+        <div class="page-intro"><span class="eyebrow">CONTEÚDO PROGRAMÁTICO</span><h2>Trilha de aulas</h2><p>Avance gradualmente. Cada aula combina explicação, exemplo, prática e desafio.</p></div>
+        <div id="courseModules" class="course-modules"></div>
+      </section>
+
+      <section class="view" id="view-lesson">
+        <div class="lesson-toolbar"><button class="text-button" data-go="course">← Voltar à trilha</button><span id="lessonPosition" class="status-pill">Aula</span></div>
+        <article class="panel lesson-panel" id="lessonContent"></article>
+      </section>
+
+      <section class="view" id="view-lab">
+        <div class="page-intro"><span class="eyebrow">PRÁTICA ORIENTADA</span><h2>Laboratório de código</h2><p>Edite HTML, CSS e JavaScript e veja o resultado em uma prévia isolada.</p></div>
+        <div class="lab-toolbar"><div class="tab-group"><button class="code-tab active" data-tab="html">HTML</button><button class="code-tab" data-tab="css">CSS</button><button class="code-tab" data-tab="js">JavaScript</button></div><div class="lab-actions"><button class="btn btn-secondary" id="resetCode">Restaurar exemplo</button><button class="btn btn-primary" id="runCode">▶ Executar</button></div></div>
+        <div class="lab-grid">
+          <div class="editor-panel"><div class="editor-heading"><span id="editorFile">index.html</span><span>Editor didático</span></div><textarea id="codeEditor" spellcheck="false" aria-label="Editor de código"></textarea><div class="editor-foot">Dica: altere um trecho e execute novamente.</div></div>
+          <div class="preview-panel"><div class="editor-heading"><span>Pré-visualização</span><span class="live-label">LOCAL</span></div><iframe id="previewFrame" title="Pré-visualização do site criado" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe><div class="console-panel"><strong>Console de saída</strong><pre id="consoleOutput">Aguardando execução…</pre></div></div>
+        </div>
+        <div class="notice"><strong>Segurança do laboratório:</strong> a prévia roda em um iframe isolado. Não insira dados pessoais, senhas ou chaves secretas no código de teste.</div>
+      </section>
+
+      <section class="view" id="view-library">
+        <div class="page-intro"><span class="eyebrow">CONSULTA E APROFUNDAMENTO</span><h2>Biblioteca ilustrada</h2><p>Conceitos visuais, glossário e fontes técnicas para continuar aprendendo.</p></div>
+        <div class="search-row"><input id="librarySearch" type="search" placeholder="Pesquisar HTML, CSS, JavaScript, acessibilidade…" aria-label="Pesquisar na biblioteca"><span id="libraryCount">6 recursos</span></div>
+        <div id="libraryGrid" class="library-grid"></div>
+        <section class="panel references"><span class="eyebrow">FONTES E REFERÊNCIAS</span><h3>Documentação recomendada</h3><p>Fontes primárias e materiais técnicos. Os links são externos e exigem conexão à internet.</p><ul>
+          <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development" target="_blank" rel="noopener noreferrer">MDN Web Docs — Aprendizado de desenvolvimento web</a></li>
+          <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">WHATWG — HTML Living Standard</a></li>
+          <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">W3C — Web Content Accessibility Guidelines (WCAG) 2.2</a></li>
+          <li><a href="https://web.dev/learn/" target="_blank" rel="noopener noreferrer">web.dev — Learn web development</a></li>
+          <li><a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">JavaScript.info — The Modern JavaScript Tutorial</a></li>
+          <li><a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages — Documentação de publicação</a></li>
+        </ul><p class="small-muted">Referências para estudo; versões, traduções e conteúdos devem ser revisados periodicamente.</p></section>
+      </section>
+
+      <section class="view" id="view-tutor">
+        <div class="page-intro"><span class="eyebrow">ORIENTAÇÃO PEDAGÓGICA</span><h2>Tutor inteligente</h2><p>Descreva sua dúvida ou cole um trecho de código. O tutor oferece orientação local baseada em padrões e conceitos do curso.</p></div>
+        <div class="tutor-layout">
+          <section class="panel tutor-chat"><div class="tutor-head"><div class="tutor-avatar">✳</div><div><strong>Tutor Formação Web</strong><small id="tutorMode">Orientador local · modo sem custo</small></div><span class="status-pill">Disponível</span></div><div id="chatMessages" class="chat-messages"><div class="chat-bubble tutor"><strong>Olá! Vamos aprender juntos.</strong><p>Posso ajudar com HTML, CSS, JavaScript, responsividade, acessibilidade e erros comuns. Conte o que está tentando fazer.</p></div></div><form id="tutorForm" class="chat-form"><textarea id="tutorInput" rows="3" placeholder="Ex.: Meu CSS não altera a cor do título. O que devo verificar?" required></textarea><button class="btn btn-primary" type="submit">Analisar dúvida →</button></form></section>
+          <aside class="panel tutor-side"><h3>Atalhos de aprendizagem</h3><button class="quick-prompt" data-prompt="Explique a diferença entre HTML, CSS e JavaScript com um exemplo.">Diferença entre HTML, CSS e JS</button><button class="quick-prompt" data-prompt="Meu botão não funciona. Mostre um roteiro de diagnóstico.">Diagnosticar botão</button><button class="quick-prompt" data-prompt="Como tornar uma página responsiva para celular?">Responsividade</button><button class="quick-prompt" data-prompt="Quais verificações básicas de acessibilidade devo fazer?">Acessibilidade</button><div class="notice"><strong>Transparência do tutor</strong><p>Sem credenciais de IA, o tutor usa orientações locais. A integração remota opcional só funciona após configurar uma Edge Function e um provedor no servidor. Não cole senhas, tokens ou dados pessoais.</p></div></aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-assessment">
+        <div class="page-intro"><span class="eyebrow">VERIFICAÇÃO DE APRENDIZAGEM</span><h2>Avaliações</h2><p>Responda às questões e leia as justificativas. A avaliação é formativa e pode ser refeita.</p></div>
+        <div class="panel assessment-panel"><div class="section-heading"><div><span class="eyebrow">DIAGNÓSTICO</span><h3>Conhecimentos fundamentais</h3></div><span class="status-pill">6 questões</span></div><form id="quizForm"></form><div id="quizResult" aria-live="polite"></div></div>
+      </section>
+
+      <section class="view" id="view-project">
+        <div class="page-intro"><span class="eyebrow">APLICAÇÃO INTEGRADORA</span><h2>Projeto final</h2><p>Construa um site institucional simples e registre evidências de que os requisitos foram atendidos.</p></div>
+        <div class="project-grid"><section class="panel"><h3>Requisitos do projeto</h3><p>Marque cada requisito após implementar e testar no seu projeto.</p><div id="projectChecklist" class="checklist"></div><button class="btn btn-secondary" id="saveProject">Salvar checklist</button></section><section class="panel"><span class="eyebrow">ENTREGA ESPERADA</span><h3>Site institucional responsivo</h3><div class="project-illustration"><div class="browser-mini"><div></div><b></b><i></i><i></i><span></span></div></div><ul class="deliverables"><li>Código-fonte organizado</li><li>Prévia em desktop e celular</li><li>Registro dos testes realizados</li><li>Explicação das decisões de projeto</li></ul><p class="small-muted">A avaliação formal do projeto exige rubrica e revisão por responsável pedagógico. O checklist sozinho não comprova domínio.</p></section></div>
+      </section>
+
+      <section class="view" id="view-certificate">
+        <div class="page-intro"><span class="eyebrow">RECONHECIMENTO DA APRENDIZAGEM</span><h2>Certificação</h2><p>Consulte os critérios e o estado do processo de certificação. A emissão depende de validação institucional e revisão do projeto.</p></div>
+        <div class="certificate-preview"><div class="certificate-inner"><span class="cert-brand">FORMAÇÃO WEB</span><div class="cert-line"></div><span class="cert-kicker">CERTIFICADO DE CONCLUSÃO</span><h2>Criação de Sites Modernos</h2><p>HTML, CSS e JavaScript — do zero à publicação</p><div class="cert-name">NOME DO ESTUDANTE</div><p class="cert-placeholder">Modelo ilustrativo. Nenhum certificado foi emitido.</p><div class="cert-bottom"><span>Carga horária: a definir</span><span>Registro: não emitido</span><span>Validação: indisponível</span></div></div></div>
+        <div class="panel cert-status"><span class="status-pill warning">Em preparação</span><h3>O que falta para uma certificação confiável?</h3><ul><li>Definir carga horária e critérios de aprovação.</li><li>Identificar formalmente a instituição emissora e o responsável.</li><li>Implementar autenticação e registros protegidos no servidor.</li><li>Gerar identificador único e página pública de validação.</li><li>Implementar assinatura eletrônica real, se adotada.</li><li>Testar emissão, consulta, revogação e proteção de dados.</li></ul><p><strong>Importante:</strong> o QR Code isolado não comprova autenticidade. Esta versão não emite certificado oficial ou verificável e não declara reconhecimento pelo MEC.</p></div>
+      </section>
+
+      <footer class="app-footer">© 2026 Formação Web · Material didático em desenvolvimento · <a href="README.txt" target="_blank">Documentação</a></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
